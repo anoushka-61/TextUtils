@@ -39,7 +39,7 @@ export default function About() {
         </button>
         </h2>
         <div id="flush-collapseOne" className="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample"style={mystyle}>
-        <div className="accordion-body"style={mystyle}>TextUtils is created by Anoushka Srivastava , B-Tech CSE,3rd Year student.
+        <div className="accordion-body"style={mystyle}>TextUtils is created by Anoushka Srivastava , B-Tech CSE,3rd Year student.</div>
         </div>
     </div>
     <div className="accordion-item"style={mystyle}>
@@ -63,6 +63,7 @@ export default function About() {
         </div>
     </div>
     </div>
+    
         <button style={mystyle}  className="btn btn-primary my-3" onClick={togglestyle}>{btntext}</button>        
             </div>
         )

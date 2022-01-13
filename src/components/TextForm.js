@@ -15,24 +15,24 @@ export default function TextForm(props) {
 <textarea className="form-control"  value={text} onChange={handleOnChange} id="textbox"  rows="8" style={props.mode==='light'?{backgroundColor:'white',color: '#042743'}:{backgroundColor:'grey',color:'white'}}></textarea>
   </div>
   <div>
-      <button  className="btn btn-primary my-3" onClick={() =>{ setText(text.toUpperCase());
+      <button disabled={text.length==0} className="btn btn-primary my-3" onClick={() =>{ setText(text.toUpperCase());
       props.alert("converted to upper case","success");}}>
         Convert to Uppercase
       </button>
-      <button className="btn btn-primary my-3 mx-2" onClick={() =>{ setText(text.toLowerCase());
+      <button disabled={text.length==0} className="btn btn-primary my-3 mx-2" onClick={() =>{ setText(text.toLowerCase());
       props.alert("converted to lower case","success");}}>
         Convert to Lowercase
       </button>
-      <button className="btn btn-primary my-3 mx-2" onClick={() =>{ setText("");
+      <button disabled={text.length==0} className="btn btn-primary my-3 mx-2" onClick={() =>{ setText("");
       props.alert("Text Cleared","success");}}>
         Clear
       </button>
-      <button className="btn btn-primary my-3 mx-2" onClick={() => {
+      <button disabled={text.length==0} className="btn btn-primary my-3 mx-2" onClick={() => {
       navigator.clipboard.writeText(text);
       props.alert("Text Copied","success");;}}>
         Copy Text
       </button>
-      <button className="btn btn-primary my-3 mx-2" onClick={() => {
+      <button disabled={text.length==0} className="btn btn-primary my-3 mx-2" onClick={() => {
         let ptext = navigator.clipboard.readText();
         ptext.then(txt => { setText(txt);  });
         props.alert("Text Pasted","success");

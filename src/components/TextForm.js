@@ -44,7 +44,7 @@ export default function TextForm(props) {
     </div>
     <div className='container my-2'style={props.mode==='light'?{color:'#042743'}:{color:'white'}}>
     <h1 >Your text summary</h1>
-    <p  > {((text.trim().split(" ")).filter(function (element) {
+    <p  > {((text.trim().split(/\s+/)).filter(function (element) {
                     return element !== ""; })).length} words, {text.length} characters</p>
     <p >{0.008*text.length} minutes read</p>
     <h2 >Preview</h2>

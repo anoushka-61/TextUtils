@@ -42,7 +42,7 @@ function App() {
      <div className="container my-3">
 
      <Routes>
-          <Route  exact path="/About" element={<About />}>
+          <Route  exact path="/About" element={<About mode={mode} />}>
             
           </Route>
           <Route exact path="/" element={
